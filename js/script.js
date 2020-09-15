@@ -1,20 +1,26 @@
 "use strict";
 
-//alert('Hello');
+let numberOfFilms;
 
-// const result = prompt("Напишите", "фывфыв");
-// console.log(typeof(result));
+numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?");
 
+console.log(numberOfFilms);
 
-
-
-
-let incr = 10,
-    decr = 10;
-
-
-
-    incr++;
+let personalMovieDB = {
+    count:numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat:false
+};
 
 
-    decr--;
+for (let cnt = 0; cnt < personalMovieDB.count; cnt++) {
+    let movieName = prompt("Назовите фильм");
+    let rank = +prompt("Поставьте оценку");
+
+    personalMovieDB.movies[movieName] = rank;
+
+}
+
+console.log(personalMovieDB);
