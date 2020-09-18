@@ -1,3 +1,5 @@
+"use strict";
+
 let numberOfFilms;
 
 numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?");
@@ -5,7 +7,7 @@ numberOfFilms = +prompt("Сколько фильмов вы уже посмот�
 console.log(numberOfFilms);
 
 let personalMovieDB = {
-    count:0,
+    count:numberOfFilms,
     movies: {},
     actors: {},
     genres: [],
@@ -13,10 +15,12 @@ let personalMovieDB = {
 };
 
 
-for (let cnt = 0; cnt < 2; cnt++) {
+for (let cnt = 0; cnt < personalMovieDB.count; cnt++) {
     let movieName = prompt("Назовите фильм");
     let rank = +prompt("Поставьте оценку");
 
     personalMovieDB.movies[movieName] = rank;
 
 }
+
+console.log(personalMovieDB);
