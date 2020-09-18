@@ -1,8 +1,15 @@
 "use strict";
 
-let numberOfFilms;
+let  numberOfFilms;
+function start() {
+  
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)){
+        numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?");
+    }
 
-numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?");
+}
+
+start();
 
 console.log(numberOfFilms);
 
